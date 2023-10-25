@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link data-th-href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link data-th-href="@{/css/main.css}" rel="stylesheet">
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">ApisSTV</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index" class="nav-link " aria-current="page">Главная</a></li>
+            <li class="nav-item"><a href="create-article" class="nav-link active">Создать</a></li>
+            <li class="nav-item"><a href="posts" class="nav-link">Статьи</a></li>
+            <!-- <li class="nav-item"><a href="about" class="nav-link">О нас</a></li>-->
+            <li class="nav-item"><a href="my" class="nav-link">My Page</a></li>
+        </ul>
+    </nav>
+    <a class="btn btn-outline-primary" href="#">Sign up</a>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div id="title">
+            <h1>Spring WebFlux + Thymeleaf</h1>
+        </div>
+        <table id="allMovies" class="table table-striped">
+            <thead>
+            <tr>
+                <th width="70%">Name</th>
+                <th>Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="result" data-th-each="movie : ${movies}">
+                <td>[[${movie.name}]]</td>
+                <td>[[${movie.score}]]</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
